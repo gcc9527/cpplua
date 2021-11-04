@@ -1,0 +1,24 @@
+﻿  lua_cmsgpack.c
+D:\CPPFILE\luabin\luapack\lua_cmsgpack.c(183,21): warning C4267: “=”: 从“size_t”转换到“unsigned char”，可能丢失数据
+D:\CPPFILE\luabin\luapack\lua_cmsgpack.c(193,36): warning C4267: “=”: 从“size_t”转换到“unsigned char”，可能丢失数据
+D:\CPPFILE\luabin\luapack\lua_cmsgpack.c(205,1): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\CPPFILE\luabin\luapack\lua_cmsgpack.c(241,40): warning C4244: “=”: 从“int64_t”转换到“unsigned char”，可能丢失数据
+D:\CPPFILE\luabin\luapack\lua_cmsgpack.c(248,50): warning C4244: “=”: 从“__int64”转换到“unsigned char”，可能丢失数据
+D:\CPPFILE\luabin\luapack\lua_cmsgpack.c(249,48): warning C4244: “=”: 从“__int64”转换到“unsigned char”，可能丢失数据
+D:\CPPFILE\luabin\luapack\lua_cmsgpack.c(250,46): warning C4244: “=”: 从“__int64”转换到“unsigned char”，可能丢失数据
+D:\CPPFILE\luabin\luapack\lua_cmsgpack.c(252,40): warning C4244: “=”: 从“int64_t”转换到“unsigned char”，可能丢失数据
+D:\CPPFILE\luabin\luapack\lua_cmsgpack.c(273,40): warning C4244: “=”: 从“int64_t”转换到“unsigned char”，可能丢失数据
+D:\CPPFILE\luabin\luapack\lua_cmsgpack.c(280,50): warning C4244: “=”: 从“__int64”转换到“unsigned char”，可能丢失数据
+D:\CPPFILE\luabin\luapack\lua_cmsgpack.c(281,48): warning C4244: “=”: 从“__int64”转换到“unsigned char”，可能丢失数据
+D:\CPPFILE\luabin\luapack\lua_cmsgpack.c(282,46): warning C4244: “=”: 从“__int64”转换到“unsigned char”，可能丢失数据
+D:\CPPFILE\luabin\luapack\lua_cmsgpack.c(284,40): warning C4244: “=”: 从“int64_t”转换到“unsigned char”，可能丢失数据
+D:\CPPFILE\luabin\luapack\lua_cmsgpack.c(308,36): warning C4244: “=”: 从“int64_t”转换到“unsigned char”，可能丢失数据
+D:\CPPFILE\luabin\luapack\lua_cmsgpack.c(331,36): warning C4244: “=”: 从“int64_t”转换到“unsigned char”，可能丢失数据
+D:\CPPFILE\luabin\luapack\lua_cmsgpack.c(390,27): warning C4244: “函数”: 从“size_t”转换到“lua_Number”，可能丢失数据
+D:\CPPFILE\luabin\luapack\lua_cmsgpack.c(453,34): warning C4244: “=”: 从“lua_Integer”转换到“int”，可能丢失数据
+D:\CPPFILE\luabin\luapack\lua_cmsgpack.c(830,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\CPPFILE\luabin\luapack\lua_cmsgpack.c(854,1): warning C4244: “初始化”: 从“lua_Integer”转换到“int”，可能丢失数据
+D:\CPPFILE\luabin\luapack\lua_cmsgpack.c(861,1): warning C4244: “初始化”: 从“lua_Integer”转换到“int”，可能丢失数据
+D:\CPPFILE\luabin\luapack\lua_cmsgpack.c(862,1): warning C4244: “初始化”: 从“lua_Integer”转换到“int”，可能丢失数据
+    正在创建库 D:\CPPFILE\luabin\x64\Debug\cmsgpack.lib 和对象 D:\CPPFILE\luabin\x64\Debug\cmsgpack.exp
+  luapack.vcxproj -> D:\CPPFILE\luabin\x64\Debug\cmsgpack.dll

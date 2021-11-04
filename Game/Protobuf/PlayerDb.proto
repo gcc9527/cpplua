@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+
+message MsgPlayerBagItem
+{
+    int32 uid = 1; // 唯一id
+    int32 id = 2; // 配置id
+    int64 cnt = 3; // 数量
+    map<int32, int32> attr = 4; // 基础属性
+    map<int32, int32> dynaAttr = 5; // 动态属性
+    repeated int32 skills = 6; // 技能id列表
+}
+
+message MsgPlayerBag
+{
+    int32 cap = 1; // 背包容量
+    map<int32, MsgPlayerBagItem> msgPlayerBagItem = 2;// 物品uid,物品对象
+}
+
+message MsgHero
+{
+    int32 uid = 1; // 实例id
+    int32 id = 2; // 配置id
+    int32 lv = 3; // 等级
+    map<int32, MsgPlayerBagItem> msgPlayerBagItem = 4; // 身上的装备数据(包括基础装备,符文,宝石等),key是位置
+    map<int32, int32> attrs = 5; // 属性数据 key是属性id,val是属性值
+}
+
+message MsgPlayer
+{
+    int32 uid = 1; // 玩家uid
+    string name = 2; // 玩家名字
+    map<int32, MsgPlayerBag> msgPlayerBag = 3; // 背包数据 key是背包索引
+    map<int32, MsgHero> msgHero = 4; // 英雄列表 key是英雄实例id
+}

@@ -1,0 +1,49 @@
+先卸载mariadb。
+检查mariadb是否已安装
+
+[root@localhost ~]# yum list installed | grep mariadb
+
+mariadb-libs.x86_64 1:5.5.56-2.el7 @anaconda
+全部卸载
+
+[root@localhost ~]# yum -y remove mariadb*
+下面进行MySQL的安装。
+[root@localhost src]# wget https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+[root@localhost src]# rpm -ivh mysql57-community-release-el7-11.noarch.rpm
+检查mysql的yum源是否安装成功：
+
+yum repolist enabled | grep "mysql.*-community.*" 
+使用yum install mysql-server安装:
+
+[root@localhost src]# yum install mysql-server
+查看版本信息：
+
+ [root@localhost src]# rpm -qi mysql-community-server
+启动mysql-server：
+
+[root@localhost src]# service mysqld start
+使用初始密码登陆：
+
+[root@localhost src]# cat /var/log/mysqld.log|grep 'A temporary password'
+2018-02-11T06:47:54.773267Z 1 [Note] A temporary password is generated for root@localhost: 3=v/i;z/Y;P>
+最后一行冒号后面的部分3=v/i;z/Y;P>就是初始密码。 
+
+[root@localhost src]# mysql -u root -p
+
+修改初始密码
+
+mysql> SET PASSWORD=password('password');
+
+添加一个可远程登录的帐号
+
+mysql>GRANT all privileges on *.* TO 'root'@'%' identified by 'password 'WITH GRANT OPTION;
+mysql>FLUSH PRIVILEGES;
+
+mysql>SET PASSWORD FOR 'root'@'%'= PASSWORD('password');
+常用的命令：
+
+systemctl start mysqld    #启动mysqld
+systemctl stop mysqld    #停止mysqld
+systemctl restart mysqld    #重启mysqld
+systemctl enable mysqld   #设置开机启动
+systemctl status mysqld    #查看 MySQL Server 状态

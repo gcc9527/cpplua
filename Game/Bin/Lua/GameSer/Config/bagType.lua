@@ -1,0 +1,3 @@
+return {
+	[1]={index=1,desc="存放金币的背包",name="金币背包",bagSize=0,exMaxCnt=0,consume={{id=0,cnt=0}},xxx={a=1,b=2}},	[2]={index=2,desc="存放钻石的背包",name="钻石背包",bagSize=0,exMaxCnt=0,consume={{id=0,cnt=0}},xxx={a=1,b=2}},	[201]={index=201,desc="普通道具背包",name="普通道具背包",bagSize=200,exMaxCnt=10,consume={{id=1000,cnt=100}},xxx={a=1,b=2}},	[202]={index=202,desc="装备背包",name="装备背包",bagSize=200,exMaxCnt=10,consume={{id=1000,cnt=100}},xxx={a=1,b=2}},	[203]={index=203,desc="英雄背包",name="英雄背包",bagSize=200,exMaxCnt=10,consume={{id=1000,cnt=100}},xxx={a=1,b=2}}
+}

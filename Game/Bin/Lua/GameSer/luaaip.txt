@@ -1,0 +1,14 @@
+lua_getglobal (lua_State *L, const char *name)     获取名为name的元素且压入栈顶
+int lua_setmetatable (lua_State *L, int index); 将栈顶元素设置为index处元素的元表,调用完成后弹出栈顶元素
+int luaL_ref (lua_State *L, int t); 对栈顶对象创建一个引用，放在table的index里，这里的index就是参数table，记住这个t，在用rawgeti是会用到。引用是唯一的,完毕后删除栈顶元素
+void lua_rawgeti (lua_State *L, int index, int n);把 t[n] 的值压栈， 这里的 t 是指给定索引 index 处的一个值。 这是一个直接访问；就是说，它不会触发元方法。注意调用完后不会删除t[n]的值,要手动清除
+void lua_setglobal (lua_State *L, const char *name);将栈顶元素赋值给name变量。(name参数的值，是lua脚本中全部变量的名字。)调用完成后，会将栈顶元素弹出
+void luaL_setmetatable (lua_State *L, const char *tname);将栈顶元素存储到注册表中, 它的key为tname
+void luaL_getmetatable (lua_State *L, const char *tname);将注册表中以tname为key的元表push到栈顶.
+void lua_pushvalue (lua_State *L, int index);把堆栈上给定有效处索引处的元素作一个拷贝压栈。
+lua_rawset() 效率高点,用法同 lua_settable 不会触发__newindex
+void lua_settable (lua_State *L, int index);作一个等价于 t[k] = v 的操作，这里 t 是一个给定有效索引index 处的值，v 指栈顶的值，而 k 是栈顶之下的那个值。这个函数会把键和值都从堆栈中弹出。和在 Lua 中一样，这个函数可能触发 "newindex" 事件的元方法
+void lua_getfield (lua_State *L, int index, const char *k);把 t[k] 值压入堆栈，这里的 t 是指有效索引 index 指向的值。在 Lua 中，这个函数可能触发对应 "index" 事件的元方法
+lua_rawget 效率高点,同 lua_gettable 不会触发__index
+void lua_gettable (lua_State *L, int index);把 t[k] 值压入堆栈， 这里的 t 是指有效索引 index 指向的值， 而 k 则是栈顶放的值。这个函数会弹出堆栈上的 key （把结果放在栈上相同位置）。 在 Lua 中，这个函数可能触发对应 "index" 事件的元方法
+void lua_rawseti (lua_State *L, int index, int n)等价于 t[n] = v， 这里的 t 是指给定索引 index 处的一个值， 而 v 是栈顶的值,函数将把这个值弹出栈。 赋值操作是直接的；就是说，不会触发元方法

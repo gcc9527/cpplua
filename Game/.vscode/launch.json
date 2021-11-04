@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "type": "lua",
+            "request": "launch",
+            "name": "luadebug",
+            "luaFileExtension": "lua",
+            "cwd": "${workspaceFolder}",
+            "updateTips": true,
+            "pathCaseSensitivity": false,
+            "stopOnEntry": false,
+            "useCHook": false,
+            "autoPathMode": true,
+            "logLevel": 1,
+            "distinguishSameNameFile": true
+        },
+    ]
+}
